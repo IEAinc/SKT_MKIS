@@ -1,0 +1,301 @@
+<!-- # 3. 직무용어 유형관리 - 페이지 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>MKIS정보시스템</title>
+
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=yes,width=1250">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- GLOBAL LEVEL PLUGIN STYLES -->
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/slick/slick.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/selectordie/selectordie.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/jstree/themes/default/style.min.css">
+  <!-- //GLOBAL LEVEL PLUGIN STYLES -->
+
+  <!-- GLOBAL LEVEL PLUGINS -->
+  <script type="text/javascript" src="resource/assets/lib/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/slick/slick.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/selectordie/selectordie.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jstree/jstree.min.js"></script>
+  <!-- //GLOBAL LEVEL PLUGINS -->
+
+  <!-- CMS LEVEL PLUGINS -->
+  <!-- <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-form.js"></script> -->
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-combo.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-etc.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-pager.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-util.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-secukey.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-menu.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cookie.js"></script>
+  <script type="text/javascript" src="resource/js/cms/jquery.mark.min.js"></script>
+  <!-- //CMS LEVEL PLUGINS -->
+
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/common_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/style_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/search_word.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/popup.css">
+</head>
+
+<body>
+  <form id="form1" name="form1" action="" method="post">
+  </form>
+
+  <!-- start. wrap -->
+  <div id="wrap" class="admin">
+    <!-- start. admin_header -->
+    <div id="admin_header">
+      <div class="sta">
+        <div class="inner_wrap">
+          <div class="title">
+            <h1><a href="#"><b>MKIS</b><em>마케팅지식정보시스템</em></a></h1>
+          </div>
+          <div class="link">
+            <a href="javascript:popNewMakeWordDicReg('');"><i class="icon icon_person2"></i><em>검색관리자</em></a>
+            <a href="javascript:gotoArchive('/archive/contentsArchiveMain.do');"><i
+                class="icon icon_archive"></i><em>아카이브</em></a>
+            <a href="javascript:urlLinkPop('/main/helpPopup.do','adminHelpPopup',1070,770);"><i
+                class="icon icon_question"></i><em>도움말</em></a>
+          </div>
+        </div>
+        <div class="goLM">
+          <a href="https://mkis.sktelecom.com/login/loginMain.do" target="_blank"></a>
+        </div>
+      </div>
+      <nav class="admin_gnb">
+        <ul class="depth1">
+          <li><a href="01_dict_stt-learning-type.html"><em>SST학습지원</em></a></li>
+          <li><a href="03_dict_skt-product-type.html"><em>SKT상품/단말기사전</em></a></li>
+          <li><a href="05_dict_intent-rag.html"><em>RAG학습지원</em></a></li>
+          <li><a href="07_dict_etc-type.html"><em>기타용어</em></a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end. admin_header -->
+
+    <!-- start. container -->
+    <div id="container">
+      <!-- start. inner_wrap -->
+      <div class="inner_wrap">
+        <!-- start. admin_snb -->
+        <div class="admin_snb">
+          <h2><b>SKT 상품/단말기 사전</b></h2>
+          <nav class="lnb" data-menu="lnb">
+            <ul class="depth1">
+              <li class="on">
+                <a href="03_dict_skt-product-type.html" onclick="">직무용어 유형관리</a>
+              </li>
+              <li>
+                <a href="04_dict_skt-product.html" onclick="">직무용어 사전관리</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- end. admin_snb -->
+
+        <!-- start. content -->
+        <div id="content">
+          <section class="v1">
+            <!-- start. row -->
+            <div class="row">
+              <div class="section_title">
+                <h3>직무용어 유형관리</h3>
+                <div class="breadcrumb">
+                  <a href="#">용어사전 관리</a>
+                  <i></i>
+                  <a href="#">SKT 상품/단말기 사전</a>
+                  <i></i>
+                  <a href="#" class="curr">직무용어 유형관리</a>
+                </div>
+              </div>
+              <div class="search_condition">
+                <table class="search">
+                  <colgroup class="width2">
+                    <col class="c1">
+                    <col class="c2">
+                    <col class="c3">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">항목명</th>
+                      <td class="align_l">
+                        <input type="text" class="size5" id="searchValue" name="searchValue">
+                        <button class="btn v1" type="button" id="searchBtn"><em>검색</em></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- end. row -->
+
+            <!-- start. row -->
+            <div class="row">
+              <!-- start. list_area -->
+              <div class="list_area">
+                <!-- start. summary -->
+                <div class="summary">
+                  <div class="count" id="srchRst"><em>[전체</em><b> 2</b><em>건 1/10페이지]</em></div>
+                  <div class="sorting">
+                    <span class="select">
+                      <span class="sod_select extend-custom-select" tabindex="0" data-cycle="false" data-links="false"
+                        data-links-external="false" data-placeholder-option="false" data-filter="">
+                        <span class="sod_label">10개씩 보기</span>
+                        <span class="sod_list_wrapper">
+                          <span class="sod_list">
+                            <span class="sod_option	selected active " title="10개씩 보기" data-value="10">10개씩 보기</span>
+                            <span class="sod_option " title="20개씩 보기" data-value="20">20개씩 보기</span>
+                            <span class="sod_option " title="50개씩 보기" data-value="50">50개씩 보기</span>
+                          </span>
+                        </span>
+                        <select data-select="true" onchange="javascript:getSynonymList(1);" id="cboPageSize"
+                          name="cboPageSize">
+                          <option value="10">10개씩 보기</option>
+                          <option value="20">20개씩 보기</option>
+                          <option value="50">50개씩 보기</option>
+                        </select>
+                      </span>
+                    </span>
+                    <button type="button" class="btn v1 big1" name="btnExlDown" id="btnExlDown"><em>엑셀
+                        다운로드</em></button>
+                  </div>
+                </div>
+                <!-- end. summary -->
+
+                <!-- start. synonymList -->
+                <table class="v1 tbl_line" id="synonymList">
+                  <colgroup class="admin_width1">
+                    <col class="c1">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c4">
+                    <col class="c4">
+                    <col class="c4">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">선택</th>
+                      <th scope="col">직무용어</th>
+                      <th scope="col">항목1 (*중복 불가)</th>
+                      <th scope="col">항목2</th>
+                      <th scope="col">항목3</th>
+                      <th scope="col">항목4</th>
+                      <th scope="col">항목5</th>
+                      <th scope="col">항목6</th>
+                      <th scope="col">항목7</th>
+                      <th scope="col">항목8</th>
+                      <th scope="col">외부 전송</th>
+                      <th scope="col">등록자</th>
+                      <th scope="col">등록일</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="both_side">
+                    <tr>
+                      <td colspan="5">
+                        <div class="l_side">
+                          <button type="button" class="btn v1 grey big1 " id="deleteBtn"
+                            name="deleteBtn"><em>삭제</em></button>
+                        </div>
+                        <div class="r_side">
+                          <button type="button" class="btn v1 big1 " id="insertBtn"
+                            name="insertBtn"><em>등록</em></button>
+                          <button type="button" class="btn v1 big1 " id="applyBtn" name="applyBtn"><em>수정</em></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tfoot>
+                  <tbody id="cntnts_list">
+                    <tr>
+                      <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                            value="1276"><i></i></label></td>
+                      <td>상품 정보</td>
+                      <td>상품ID</td>
+                      <td>대분류</td>
+                      <td>중분류</td>
+                      <td>소분류</td>
+                      <td>상품명</td>
+                      <td>STT 상품</td>
+                      <td></td>
+                      <td></td>
+                      <td>Y</td>
+                      <td>홍길동</td>
+                      <td>2025-10-16</td>
+                    </tr>
+                    <tr>
+                      <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                            value="1276"><i></i></label></td>
+                      <td>단말기 정보</td>
+                      <td>모델ID</td>
+                      <td>제조사</td>
+                      <td>단말기명</td>
+                      <td>사전 등록 모델명</td>
+                      <td>단말 속성</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>N</td>
+                      <td>홍길동</td>
+                      <td>2025-10-16</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- end. synonymList -->
+
+                <!-- start. paginate -->
+                <div id="synonymPager" class="paginate">
+                  <a title="처음" href="javascript:;" class="ctrl start disabled"><i></i></a>
+                  <a title="이전" href="javascript:;" class="ctrl prev"><i></i></a>
+                  <span class="pages">
+                    <a page="1" title="현재페이지" href="javascript:;" class="curr">1</a>
+                    <a page="2" title="2페이지" href="javascript:;">2</a>
+                    <a page="3" title="3페이지" href="javascript:;">3</a>
+                    <a page="4" title="4페이지" href="javascript:;">4</a>
+                    <a page="5" title="5페이지" href="javascript:;">5</a>
+                    <a page="6" title="6페이지" href="javascript:;">6</a>
+                    <a page="7" title="7페이지" href="javascript:;">7</a>
+                    <a page="8" title="8페이지" href="javascript:;">8</a>
+                    <a page="9" title="9페이지" href="javascript:;">9</a>
+                    <a page="10" title="10페이지" href="javascript:;">10</a>
+                  </span>
+                  <a title="다음(11)" href="javascript:;" class="ctrl next"><i></i></a>
+                  <a title="끝(19)" href="javascript:;" class="ctrl end"><i></i></a>
+                </div>
+                <!-- end. paginate -->
+              </div>
+              <!-- end. list_area -->
+            </div>
+            <!-- end. row -->
+          </section>
+        </div>
+        <!-- end. content -->
+      </div>
+      <!-- end. inner_wrap -->
+    </div>
+    <!-- end. container -->
+  </div>
+  <!-- end. wrap -->
+
+  <!-- GLOBAL LEVEL SCRIPT -->
+  <script type="text/javascript" src="resource/assets/js/common.ui.js"></script>
+  <!-- //GLOBAL LEVEL SCRIPT -->
+</body>
+
+</html>

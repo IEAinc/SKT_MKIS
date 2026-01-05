@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>팝업</title>
+
+<meta http-equiv="Content-Type" content="text/html">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="user-scalable=yes,width=1250">
+<meta name="format-detection" content="telephone=no">
+
+<!-- GLOBAL LEVEL PLUGIN STYLES -->
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/slick/slick.css">
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/selectordie/selectordie.css">
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/jstree/themes/default/style.min.css">
+<!-- //GLOBAL LEVEL PLUGIN STYLES -->
+
+<!-- GLOBAL LEVEL PLUGINS -->
+<script type="text/javascript" src="resource/assets/lib/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="resource/assets/lib/jquery/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="resource/assets/lib/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="resource/assets/lib/slick/slick.js"></script>
+<script type="text/javascript" src="resource/assets/lib/selectordie/selectordie.js"></script>
+<script type="text/javascript" src="resource/assets/lib/jstree/jstree.min.js"></script>
+<!-- //GLOBAL LEVEL PLUGINS -->
+
+<!-- CMS LEVEL PLUGINS -->
+<!-- <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-form.js"></script> -->
+<script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-combo.js"></script>
+<script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-etc.js"></script>
+<script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-pager.js"></script>
+<script type="text/javascript" src="resource/js/cms/cms-util.js"></script>
+<script type="text/javascript" src="resource/js/cms/cms-secukey.js"></script>
+<script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-menu.js"></script>
+<script type="text/javascript" src="resource/js/cms/plugins/jquery.cookie.js"></script>
+<script type="text/javascript" src="resource/js/cms/jquery.mark.min.js"></script>
+<!-- //CMS LEVEL PLUGINS -->
+
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/fonts.css">
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/common_admin.css">
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/style_admin.css">
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/search_word.css">
+<link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/popup.css">
+
+</head>
+
+<body>
+
+<!-- start. popup -->
+<div id="popup" class="p_v1">
+	<section>
+		<!-- start. p_title -->
+		<div class="p_title">
+			<h3>동의어 수정</h3>
+			<a href="javascript:;" class="close"><i class="icon icon_close"></i></a>
+		</div>
+		<!-- end. p_title -->
+
+		<!-- start. p_container -->
+		<div class="p_container">
+			<!-- start. p_content -->
+			<div class="p_content">
+				<div class="row">
+					<table class="v2">
+						<colgroup class="admin_width3">
+							<col class="c1">
+							<col class="c2">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="essential" style="padding-bottom:20px;">동의어</th>
+								<td>
+									<input type="text" class="admin_size7" maxlength="1000" id="synCtt" name="synCtt" value="SPOTV ON,SPOTVON,스포티비온,스포티비 온">
+									<em class="desc alert">*콤마(,)로 구분하여 입력하세요.</em>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end. p_content -->
+
+			<!-- start. p_footer -->
+			<div class="p_footer">
+				<button type="button" class="btn v1 red big1" id="btnMod"><em>수정</em></button>
+				<button type="button" class="btn v1 grey big1" id="btnCancel"><em>취소</em></button>
+			</div>
+			<!-- end. p_footer -->
+
+			<br><br>
+
+			<!-- start. row -->
+			<div class="row">
+				<!-- start. list_area -->
+				<div class="list_area">
+					<!-- start. summary -->
+					<div class="summary">
+						<div class="count" id="srchRst"><em>[전체</em><b> 4</b><em>건 1/1페이지]</em></div>
+
+						<div class="sorting" style="display:none">
+							<button class="btn v1" type="button" id="searchBtn"></button>
+						</div>
+					</div>
+					<!-- end. summary -->
+
+					<!-- start. synHstList -->
+					<table class="v1" id="synHstList">
+						<colgroup class="admin_width17">
+							<col class="c1">
+							<col class="c2">
+							<col class="c3">
+							<col class="c4">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">순번</th>
+								<th scope="col">동의어</th>
+								<th scope="col">등록자</th>
+								<th scope="col">등록일시</th>
+							</tr>
+						</thead>
+						<tfoot class="both_side">
+							<tr>
+								<td colspan="5">
+								</td>
+							</tr>
+						</tfoot>
+						<tbody id="cntnts_list">
+							<tr>
+								<td>1</td>
+								<td class="align_l">SPOTV ON,SPOTVON,스포티비온,스포티비 온&nbsp;</td>
+								<td>추미연</td>
+								<td>2024-08-14 15:38:21</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td class="align_l">SPOTV ON,SPOTVON,스포티비온,스포티브이온,스포티비 온&nbsp;</td>
+								<td>오지영</td>
+								<td>2023-05-23 16:57:04</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td class="align_l">SPOTV ON,SPOTVON,스포티비온,스포티브이온&nbsp;</td>
+								<td>오지영</td>
+								<td>2023-05-23 16:56:33</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td class="align_l">SPOTV ON,SPOTVON,스포티브온&nbsp;</td>
+								<td>오지영</td>
+								<td>2023-05-23 09:59:12</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- end. synHstList -->
+				</div>
+				<!-- end. list_area -->
+
+				<!-- start. paginate -->
+				<div id="synHstPager" class="paginate">
+					<a title="처음" href="javascript:;" class="ctrl start disabled"><i></i></a>
+					<a title="이전" href="javascript:;" class="ctrl prev"><i></i></a>
+					<span class="pages">
+						<a page="1" title="현재페이지" href="javascript:;" class="curr">1</a>
+						<a page="2" title="2페이지" href="javascript:;">2</a>
+						<a page="3" title="3페이지" href="javascript:;">3</a>
+						<a page="4" title="4페이지" href="javascript:;">4</a>
+						<a page="5" title="5페이지" href="javascript:;">5</a>
+						<a page="6" title="6페이지" href="javascript:;">6</a>
+						<a page="7" title="7페이지" href="javascript:;">7</a>
+						<a page="8" title="8페이지" href="javascript:;">8</a>
+						<a page="9" title="9페이지" href="javascript:;">9</a>
+						<a page="10" title="10페이지" href="javascript:;">10</a>
+					</span>
+					<a title="다음" href="javascript:;" class="ctrl next"><i></i></a>
+					<a title="끝" href="javascript:;" class="ctrl end disabled"><i></i></a>
+				</div>
+				<!-- end. paginate -->
+			</div>
+			<!-- end. row -->
+		</div>
+		<!-- end. p_container -->
+	</section>
+</div>
+<!-- end. popup -->
+
+<!-- GLOBAL LEVEL SCRIPT -->
+<script type="text/javascript" src="resource/assets/js/common.ui.js"></script>
+<!-- //GLOBAL LEVEL SCRIPT -->
+
+</body>
+</html>

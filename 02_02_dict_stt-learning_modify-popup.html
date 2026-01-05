@@ -1,0 +1,211 @@
+<!-- # 2_02. STT학습용어  교정 단어 수정팝업 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>STT학습용어 교정 단어 수정팝업</title>
+
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="user-scalable=yes,width=1250">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- GLOBAL LEVEL PLUGIN STYLES -->
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/slick/slick.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/selectordie/selectordie.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/jstree/themes/default/style.min.css">
+  <!-- //GLOBAL LEVEL PLUGIN STYLES -->
+
+  <!-- GLOBAL LEVEL PLUGINS -->
+  <script type="text/javascript" src="resource/assets/lib/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/slick/slick.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/selectordie/selectordie.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jstree/jstree.min.js"></script>
+  <!-- //GLOBAL LEVEL PLUGINS -->
+
+  <!-- CMS LEVEL PLUGINS -->
+  <!-- <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-form.js"></script> -->
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-combo.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-etc.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-pager.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-util.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-secukey.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-menu.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cookie.js"></script>
+  <script type="text/javascript" src="resource/js/cms/jquery.mark.min.js"></script>
+  <!-- //CMS LEVEL PLUGINS -->
+
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/common_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/style_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/search_word.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/popup.css">
+</head>
+
+<body>
+  <div id="popup_wrap">
+
+    <!-- start. popup -->
+    <div id="popup" class="p_v1">
+      <section>
+        <!-- start. p_title -->
+        <div class="p_title">
+          <h3>STT학습용어 교정 단어 수정</h3>
+          <a href="javascript:;" class="close"><i class="icon icon_close"></i></a>
+        </div>
+        <!-- end. p_title -->
+
+        <!-- start. p_container -->
+        <div class="p_container">
+          <div class="p_content">
+            <div class="row">
+              <!-- start. row-header -->
+              <div class="row-header">
+                <h3 class="u-minh-20"></h3>
+                <span class="top-desc">필수 입력항목</span>
+              </div>
+              <!-- end. row-header -->
+
+              <!-- start.row-table -->
+              <div class="row-table-wrapper">
+                <table class="v2" data-toggle-accordion-collapse="collapse1">
+                  <colgroup class="width1">
+                    <col class="c1">
+                    <col class="c2">
+                    <col class="c3">
+                    <col class="c4">
+                  </colgroup>
+                  <tbody>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">용어유형</th>
+                      <td colspan="3">
+                        <span class="select">
+                          <select data-select="true">
+                            <option value="10">선택</option>
+                            <option value="20">띄어쓰기</option>
+                          </select>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">교정 전 단어</th>
+                      <td colspan="3">
+                        <input type="text" class="size1" id="cntntsTitNm" name="cntntsTitNm" maxlength="100"
+                          value="포켓파이" disabled>
+                      </td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">교정 후 단어</th>
+                      <td colspan="3">
+                        <input type="text" class="size1" id="cntntsTitNm" name="cntntsTitNm" maxlength="100" value="">
+                      </td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">교정 대상</th>
+                      <td>
+                        <div class="el-radio-columns-nm">
+                          <div class="el-radio">
+                            <label>
+                              <input type="radio" name="r2" value="3" checked>
+                              <span class="label-name">Y</span>
+                            </label>
+                          </div>
+                          <div class="el-radio">
+                            <label>
+                              <input type="radio" name="r2" value="4">
+                              <span class="label-name">N</span>
+                            </label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- end.row-table -->
+            </div>
+
+            <!-- start. p_footer -->
+            <div class="p_footer">
+              <button type="button" class="btn v1 red big1" id="btnMod"><em>수정</em></button>
+              <button type="button" class="btn v1 grey big1" id="btnCancel"><em>취소</em></button>
+            </div>
+            <!-- end. p_footer -->
+
+            <!-- start. row -->
+            <div class="row">
+              <!-- start. list_area -->
+              <div class="list_area">
+                <!-- start. summary -->
+                <div class="summary">
+                  <div class="count" id="srchRst"><em>[수정 전]</em></div>
+                  <div class="sorting" style="display:none">
+                    <button class="btn v1" type="button" id="searchBtn"></button>
+                  </div>
+                </div>
+                <!-- end. summary -->
+                <!-- start. synHstList -->
+                <table class="v1" id="synHstList" style="margin-bottom: 0;">
+                  <colgroup class="admin_width1">
+                    <col class="c1">
+                    <col class="c2">
+                    <col class="c2">
+                    <col class="c5">
+                    <col class="c5">
+                    <col class="c5">
+                    <col class="c5">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">선택</th>
+                      <th scope="col">용어유형</th>
+                      <th scope="col">교정 전 단어(*중복 불가)</th>
+                      <th scope="col">교정 후 단어</th>
+                      <th scope="col">교정 대상</th>
+                      <th scope="col">등록자</th>
+                      <th scope="col">등록일</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="both_side">
+                    <tr>
+                      <td colspan="5">
+                      </td>
+                    </tr>
+                  </tfoot>
+                  <tbody id="cntnts_list">
+                    <tr>
+                      <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq" value="1276"
+                            checked disabled><i></i></label></td>
+                      <td>띄어쓰기</td>
+                      <td> 포켓파이</td>
+                      <td>포켓 파이</td>
+                      <td>Y</td>
+                      <td>홍길동</td>
+                      <td>2025-10-16</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- end. synHstList -->
+              </div>
+              <!-- end. list_area -->
+            </div>
+            <!-- end. row -->
+          </div>
+          <!-- end. p_container -->
+      </section>
+    </div>
+    <!-- end. popup -->
+  </div>
+  <!-- GLOBAL LEVEL SCRIPT -->
+  <script type="text/javascript" src="resource/assets/js/common.ui.js"></script>
+  <!-- //GLOBAL LEVEL SCRIPT -->
+</body>
+
+</html>

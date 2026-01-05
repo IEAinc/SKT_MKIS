@@ -1,0 +1,164 @@
+<!-- # 3_01. 직무용어 유형 등록팝업 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>직무용어 유형 등록팝업</title>
+
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="user-scalable=yes,w idth=1250">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- GLOBAL LEVEL PLUGIN STYLES -->
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/slick/slick.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/selectordie/selectordie.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/jstree/themes/default/style.min.css">
+  <!-- //GLOBAL LEVEL PLUGIN STYLES -->
+
+  <!-- GLOBAL LEVEL PLUGINS -->
+  <script type="text/javascript" src="resource/assets/lib/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/slick/slick.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/selectordie/selectordie.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jstree/jstree.min.js"></script>
+  <!-- //GLOBAL LEVEL PLUGINS -->
+
+  <!-- CMS LEVEL PLUGINS -->
+  <!-- <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-form.js"></script> -->
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-combo.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-etc.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-pager.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-util.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-secukey.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-menu.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cookie.js"></script>
+  <script type="text/javascript" src="resource/js/cms/jquery.mark.min.js"></script>
+  <!-- //CMS LEVEL PLUGINS -->
+
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/common_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/style_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/search_word.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/popup.css">
+</head>
+
+<body>
+  <div id="popup_wrap">
+
+    <!-- start. popup -->
+    <div id="popup" class="p_v1">
+      <section>
+        <!-- start. p_title -->
+        <div class="p_title">
+          <h3>직무용어 유형 등록</h3>
+          <a href="javascript:;" class="close"><i class="icon icon_close"></i></a>
+        </div>
+        <!-- end. p_title -->
+
+        <!-- start. p_container -->
+        <div class="p_container">
+          <div class="p_content">
+            <div class="row">
+              <!-- start. row-header -->
+              <div class="row-header">
+                <h3 class="u-minh-20"></h3>
+                <span class="top-desc">필수 입력항목</span>
+              </div>
+              <!-- end. row-header -->
+              <!-- start.row-table -->
+              <div class="row-table-wrapper">
+                <table class="v2" data-toggle-accordion-collapse="collapse1">
+                  <colgroup class="width1">
+                    <col class="c3">
+                    <col class="c1">
+                    <col class="c1">
+                    <col class="c1">
+                  </colgroup>
+                  <tbody>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">직무 용어</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">항목 1</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 2</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 3</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 4</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 5</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 6</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 7</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row">항목 8</th>
+                      <td colspan="4"><input type="text" class="size1" id="" name="" maxlength="100"></td>
+                    </tr>
+                    <tr class="u-row-h52">
+                      <th scope="row" class="essential">외부 전송</th>
+                      <td colspan="4">
+                        <div class="el-radio-columns-nm">
+                          <div class="el-radio">
+                            <label>
+                              <input type="radio" name="r2" value="3" checked>
+                              <span class="label-name">Y(전송)</span>
+                            </label>
+                          </div>
+                          <div class="el-radio">
+                            <label>
+                              <input type="radio" name="r2" value="4">
+                              <span class="label-name">N(전송 안함)</span>
+                            </label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- end.row-table -->
+              </div>
+
+              <!-- start. p_footer -->
+              <div class="p_footer">
+                <button type="button" class="btn v1 red big1" id="btnSave"><em>등록</em></button>
+                <button type="button" class="btn v1 grey big1" id="btnCancel"><em>취소</em></button>
+              </div>
+              <!-- end. p_footer -->
+            </div>
+            <!-- end. p_container -->
+      </section>
+    </div>
+    <!-- end. popup -->
+  </div>
+
+  <!-- GLOBAL LEVEL SCRIPT -->
+  <script type="text/javascript" src="resource/assets/js/common.ui.js"></script>
+  <!-- //GLOBAL LEVEL SCRIPT -->
+
+</body>
+
+</html>

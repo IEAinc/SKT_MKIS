@@ -1,0 +1,373 @@
+<!-- # 6. RAG 학습용어 매핑등록 - 페이지 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>MKIS정보시스템</title>
+
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=yes,width=1250">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- GLOBAL LEVEL PLUGIN STYLES -->
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/slick/slick.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/selectordie/selectordie.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/jstree/themes/default/style.min.css">
+  <!-- //GLOBAL LEVEL PLUGIN STYLES -->
+
+  <!-- GLOBAL LEVEL PLUGINS -->
+  <script type="text/javascript" src="resource/assets/lib/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/slick/slick.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/selectordie/selectordie.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jstree/jstree.min.js"></script>
+  <!-- //GLOBAL LEVEL PLUGINS -->
+
+  <!-- CMS LEVEL PLUGINS -->
+  <!-- <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-form.js"></script> -->
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-combo.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-etc.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-pager.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-util.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-secukey.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-menu.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cookie.js"></script>
+  <script type="text/javascript" src="resource/js/cms/jquery.mark.min.js"></script>
+  <!-- //CMS LEVEL PLUGINS -->
+
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/common_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/style_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/search_word.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/popup.css">
+
+  <script>
+    var pop = null;
+
+    function openPopup() {
+      var goUrl = 'popup.html';
+      var popWidth = 610;
+      var popHeight = 470;
+      var popTarget = "popup";
+
+      if (pop == null || pop.closed) {
+        pop = popup_center("", popTarget, popWidth, popHeight, 'no', 'no');
+
+        $("#form1").attr("method", "POST");
+        $("#form1").attr("target", popTarget);
+        $("#form1").attr("action", goUrl).submit();
+      } else {
+        pop.focus();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form id="form1" name="form1" action="" method="post"></form>
+
+  <!-- start. wrap -->
+  <div id="wrap" class="admin">
+    <!-- start. admin_header -->
+    <div id="admin_header">
+      <div class="sta">
+        <div class="inner_wrap">
+          <div class="title">
+            <h1><a href="#"><b>MKIS</b><em>마케팅지식정보시스템</em></a></h1>
+          </div>
+          <div class="link">
+            <a href="javascript:popNewMakeWordDicReg('');"><i class="icon icon_person2"></i><em>검색관리자</em></a>
+            <a href="javascript:gotoArchive('/archive/contentsArchiveMain.do');"><i
+                class="icon icon_archive"></i><em>아카이브</em></a>
+            <a href="javascript:urlLinkPop('/main/helpPopup.do','adminHelpPopup',1070,770);"><i
+                class="icon icon_question"></i><em>도움말</em></a>
+          </div>
+        </div>
+        <div class="goLM">
+          <a href="https://mkis.sktelecom.com/login/loginMain.do" target="_blank"></a>
+        </div>
+      </div>
+      <nav class="admin_gnb">
+        <ul class="depth1">
+          <li><a href="01_dict_stt-learning-type.html"><em>SST학습지원</em></a></li>
+          <li><a href="03_dict_skt-product-type.html"><em>SKT상품/단말기사전</em></a></li>
+          <li><a href="05_dict_intent-rag.html"><em>RAG학습지원</em></a></li>
+          <li><a href="07_dict_etc-type.html"><em>기타용어</em></a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end. admin_header -->
+
+    <!-- start. container -->
+    <div id="container">
+      <div class="inner_wrap">
+        <!-- start. admin_snb -->
+        <div class="admin_snb">
+          <h2><b>고객 Intent RAG 학습지원</b></h2>
+          <nav class="lnb" data-menu="lnb">
+            <ul class="depth1">
+              <li>
+                <a href="05_dict_intent-rag.html" onclick="">RAG 학습용어 사전관리</a>
+              </li>
+              <li class="on">
+                <a href="06_dict_intent-rag-mapping.html" onclick="">RAG 학습용어 매핑등록</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- end. admin_snb -->
+        <!-- start. content -->
+        <div id="content">
+          <section class="v1">
+            <div class="row">
+              <div class="section_title">
+                <h3>RAG학습용어 맵핑등록</h3>
+                <div class="breadcrumb">
+                  <a href="#">용어사전 관리</a><i></i>
+                  <a href="#">고객 Intent RAG 학습지원 </a><i></i>
+                  <a href="#" class="curr">RAG학습용어 맵핑등록</a>
+                </div>
+              </div>
+            </div>
+            <div class="row row-dual">
+              <!-- start. row 1 -->
+              <div class="row">
+                <div class="title-row-flex">
+                  <h3>고객 발화 용어</h3>
+                  <button type="button" class="btn v1 grey big1" id="deleteBtn" name="deleteBtn"><em>초기화</em></button>
+                </div>
+                <div class="list_area" style="padding-bottom: 0;">
+                  <div class="mkis-search-box">
+                    <input type="text" class="block" id="searchValue" name="searchValue">
+                    <button class="btn v1" type="button" id="btnSearch" name="btnSearch"><em>검색</em></button>
+                  </div>
+                  <!-- start. table 1 -->
+                  <div class="table-area">
+                    <table class="v1 tbl_line table-header">
+                      <colgroup class="admin_width1">
+                        <col class="c1">
+                        <col class="c2">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                value="all"><i></i></label></th>
+                          <th>고객 발화 용어</th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <div class="table-scroll">
+                      <table class="v1 tbl_line table-body" id="synonymList">
+                        <colgroup class="admin_width1">
+                          <col class="c1">
+                          <col class="c2">
+                        </colgroup>
+                        <tbody id="cntnts_list">
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>결제 수단을 바꾸고 싶어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>로그인할 수 없어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>본인 인증 문자가 안와요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>비밀번호를 변경하고 싶어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>결제 수단을 바꾸고 싶어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>본인 인증 문자가 안와요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>비밀번호를 변경하고 싶어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>결제 수단을 바꾸고 싶어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>로그인할 수 없어요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>본인 인증 문자가 안와요</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_check"><input type="checkbox" id="synSeq" name="synSeq"
+                                  value="1276"><i></i></label></td>
+                            <td>비밀번호를 변경하고 싶어요</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- end. table 1 -->
+                  <!-- start. table-footer 1 -->
+                  <div class="table-footer both_side">
+                    <div class="l_side">
+                      <button type="button" class="btn v1 grey big1"><em>삭제</em></button>
+                    </div>
+                    <div class="r_side">
+                      <button type="button" class="btn v1 big1"><em>엑셀 업로드</em></button>
+                      <button type="button" class="btn v1 big1"><em>등록</em></button>
+                      <button type="button" class="btn v1 big1"><em>수정</em></button>
+                    </div>
+                  </div>
+                  <!--  table-footer 1 -->
+                </div>
+              </div>
+              <!-- end. row 1  -->
+
+              <!-- start. row 2 -->
+              <div class="row">
+                <div class="title-row-flex">
+                  <h3>표준 직무 용어</h3>
+                  <button type="button" class="btn v1 grey big1" id="deleteBtn2" name="deleteBtn2"><em>초기화</em></button>
+                </div>
+                <div class="list_area" style="padding-bottom: 0;">
+                  <div class="mkis-search-box">
+                    <input type="text" class="block" id="searchValue" name="searchValue">
+                    <button class="btn v1" type="button" id="btnSearch" name="btnSearch"><em>검색</em></button>
+                  </div>
+                  <!-- start. table 2 -->
+                  <div class="table-area">
+                    <table class="v1 tbl_line table-header">
+                      <colgroup class="admin_width1">
+                        <col class="c1">
+                        <col class="c2">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">선택</th>
+                          <th scope="col">표준 직무 용어</th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <div class="table-scroll" style="padding-bottom: 0;">
+                      <table class="v1 tbl_line table-body" id="synonymList2">
+                        <colgroup class="admin_width1">
+                          <col class="c1">
+                          <col class="c2">
+                        </colgroup>
+                        <tbody id="cntnts_list2">
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>로그인</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>비밀번호</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>아이디</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>주문</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>비밀번호</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>아이디</td>
+                          </tr>
+                          <tr>
+                            <td><label class="label_ladio"><input type="radio" id="synSeq2" name="synSeq2"
+                                  value="1276"><i></i></label></td>
+                            <td>주문</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- end. table 2 -->
+                  <!-- start. table-footer 1 -->
+                  <div class="table-footer both_side">
+                    <div class="l_side">
+                      <button type="button" class="btn v1 grey big1"><em>삭제</em></button>
+                    </div>
+                    <div class="r_side">
+                      <button type="button" class="btn v1 big1"><em>등록</em></button>
+                      <button type="button" class="btn v1 big1"><em>수정</em></button>
+                    </div>
+                  </div>
+                  <!-- end. table-footer 1 -->
+                </div>
+              </div>
+              <!-- end. row 2 -->
+              <div class="row-bottom">
+                <button type="button" class="btn-main" id="mappingBtn" name="mappingBtn">
+                  <span>맵핑 생성</span><i></i>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- end. content -->
+      </div>
+    </div>
+    <!-- end. container -->
+  </div>
+  <!-- end. wrap -->
+
+  <!-- GLOBAL LEVEL SCRIPT -->
+  <script type="text/javascript" src="resource/assets/js/common.ui.js"></script>
+  <!-- //GLOBAL LEVEL SCRIPT -->
+  <script>
+    $(document).ready(function () {
+      // 전체 선택 체크박스 클릭
+      $("input[name='synSeq'][value='all']").on("change", function () {
+        const isChecked = $(this).is(":checked");
+
+        $("#synonymList tbody input[name='synSeq']")
+          .not("[value='all']")
+          .prop("checked", isChecked);
+      });
+
+      $("#synonymList tbody input[name='synSeq']").on("change", function () {
+        const total = $("#synonymList tbody input[name='synSeq']").not("[value='all']").length;
+        const checked = $("#synonymList tbody input[name='synSeq']:checked").not("[value='all']").length;
+
+        $("input[name='synSeq'][value='all']").prop("checked", total === checked);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

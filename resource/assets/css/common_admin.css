@@ -1,0 +1,220 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	overflow-y: scroll;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p,
+	button, canvas, figure {
+	margin: 0;
+	padding: 0;
+}
+
+body, h1, h2, h3, h4, input, button {
+/* 	font-family: Malgun Gothic, Helvetica, AppleSDGothicNeo, sans-serif; */
+	font-size: 12px;
+	color: #0d0d0d;
+}
+
+body {
+	background-color: #fff;
+	*word-break: break-all;
+	-ms-word-break: break-all;
+}
+
+img, fieldset, iframe {
+	border: 0 none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+i, em, address {
+	font-style: normal;
+}
+
+a {
+	color: #0d0d0d;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #390;
+	text-decoration: underline;
+}
+
+label, button {
+	cursor: pointer;
+}
+
+button {
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+button * {
+	position: relative;
+}
+
+button img {
+	left: -3px;
+	*left: auto;
+}
+
+input[type=text],
+input[type=password] {
+		outline: none;
+}
+
+input, select, button {
+	vertical-align: middle;
+}
+
+html:first-child select {
+	height: 20px;
+	padding-right: 6px;
+}
+
+option {
+	padding-right: 6px;
+}
+
+/*hr { display: none; }*/
+legend {
+	*width: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+/** selectbox **/
+.extend-custom-select {
+		padding: 8.5px 20px !important;
+		border: 1px solid #d0d0d0 !important;
+		border-radius: 2px;
+		cursor: pointer !important;
+}
+.extend-custom-select:before {
+		display: none;
+}
+.extend-custom-select:after {
+		margin-left: auto;
+		content: "" !important;
+		width: 12px;
+		height: 8px;
+		background: #fff url("../images/icon-search-arrow.png") no-repeat 95% 50%/10px auto;
+}
+.extend-custom-select .sod_label {
+		font-family: Noto Sans KR, Roboto;
+		font-size: 11.5px;
+		color: #555;
+		font-weight: 500;
+}
+.extend-custom-select .sod_list_wrapper {
+		border: 1px solid #ddd !important;
+		left: 2px !important;
+}
+.extend-custom-select .sod_list_wrapper .sod_list .sod_option {
+		display: block;
+		text-align: left;
+		font-family: Noto Sans KR;
+		font-size: 13px;
+		line-height: 26px;
+		padding: 6px 10px;
+		color: #000;
+}
+.extend-custom-select .sod_list_wrapper .sod_list .sod_option:hover {
+		background-color: #eee;
+		opacity: 0.7;
+}
+
+/* pagination */
+.paginate {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		margin: 34px 0;
+}
+.paginate a,
+.paginate .pages > a {
+		margin-left: 6px;
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		width: 26px;
+		height: 26px;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		background-color: #ffffff;
+		border: 1px solid #e4e4e4;
+		border-radius: 4px;
+		font-family: Roboto;
+		font-size: 13px;
+		color: #555555;
+		font-weight: 400;
+}
+.paginate a > a,
+.paginate .pages > a > a {
+		margin-left: 0;
+}
+.paginate a.curr,
+.paginate .pages > a.curr {
+		font-weight: 700;
+		background-color: #f3f0ff;
+		border-color: #3617ce;
+		color: #3617ce;
+}
+.paginate a.before a, .paginate a.prev a, .paginate a.next a, .paginate a.after a,
+.paginate .pages > a.before a,
+.paginate .pages > a.prev a,
+.paginate .pages > a.next a,
+.paginate .pages > a.after a {
+		border: 0;
+		text-indent: -9999px;
+}
+.paginate a.start,
+.paginate .pages > a.start {
+		background: #fff url("../images/pagination-button-before.png") no-repeat 50% 50%;
+}
+.paginate a.prev,
+.paginate .pages > a.prev {
+		background: #fff url("../images/pagination-button-prev.png") no-repeat 50% 50%;
+}
+.paginate a.next,
+.paginate .pages > a.next {
+		background: #fff url("../images/pagination-button-next.png") no-repeat 50% 50%;
+}
+.paginate a.end,
+.paginate .pages > a.end {
+		background: #fff url("../images/pagination-button-after.png") no-repeat 50% 50%;
+}
+
+/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,118 @@
+<!-- # 6_02. 고객 발화 용어 엑셀 업로드팝업 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>고객 발화 용어 엑셀 업로드팝업</title>
+
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="user-scalable=yes,width=1250">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- GLOBAL LEVEL PLUGIN STYLES -->
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/slick/slick.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/selectordie/selectordie.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/lib/jstree/themes/default/style.min.css">
+  <!-- //GLOBAL LEVEL PLUGIN STYLES -->
+
+  <!-- GLOBAL LEVEL PLUGINS -->
+  <script type="text/javascript" src="resource/assets/lib/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery/jquery-1.12.1.min.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/slick/slick.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/selectordie/selectordie.js"></script>
+  <script type="text/javascript" src="resource/assets/lib/jstree/jstree.min.js"></script>
+  <!-- //GLOBAL LEVEL PLUGINS -->
+
+  <!-- CMS LEVEL PLUGINS -->
+  <!-- <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-form.js"></script> -->
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-combo.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-etc.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-pager.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-util.js"></script>
+  <script type="text/javascript" src="resource/js/cms/cms-secukey.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cms-menu.js"></script>
+  <script type="text/javascript" src="resource/js/cms/plugins/jquery.cookie.js"></script>
+  <script type="text/javascript" src="resource/js/cms/jquery.mark.min.js"></script>
+  <!-- //CMS LEVEL PLUGINS -->
+
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/common_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/style_admin.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/search_word.css">
+  <link rel="stylesheet" type="text/css" media="all" href="resource/assets/css/popup.css">
+</head>
+
+<body>
+  <div id="popup_wrap">
+
+    <!-- start. popup -->
+    <div id="popup" class="p_v1">
+      <section>
+        <!-- start. p_title -->
+        <div class="p_title">
+          <h3>고객 발화 용어 엑셀 업로드</h3>
+          <a href="javascript:;" class="close"><i class="icon icon_close"></i></a>
+        </div>
+        <!-- end. p_title -->
+        <!-- start. p_container -->
+        <div class="p_container">
+          <div class="p_content">
+            <div class="row">
+              <!-- <div>업로드 영역</div> -->
+              <!-- start. p_footer -->
+              <div class="p_footer">
+                <button type="button" class="btn v1 red big1" id="btnSave"><em>업로드</em></button>
+                <button type="button" class="btn v1 grey big1" id="btnCancel"><em>취소</em></button>
+              </div>
+              <!-- end. p_footer -->
+            </div>
+            <!-- end. p_container -->
+      </section>
+    </div>
+    <!-- end. popup -->
+  </div>
+  <!-- GLOBAL LEVEL SCRIPT -->
+  <script type="text/javascript" src="resource/assets/js/common.ui.js"></script>
+  <!-- //GLOBAL LEVEL SCRIPT -->
+
+  <!-- excel upload -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fileInput = document.getElementById("realFile");
+      const fileNameInput = document.getElementById("fileName");
+      const clearBtn = document.getElementById("btnClear");
+      const fileBtn = document.querySelector(".btn-file"); // <label>
+
+      // 파일 선택 시
+      fileInput.addEventListener("change", function () {
+        const fileName = this.files.length ? this.files[0].name : "";
+
+        fileNameInput.value = fileName;
+        clearBtn.style.display = fileName ? "block" : "none";
+
+        if (fileName) {
+          fileBtn.classList.add("disabled");
+        }
+      });
+
+      // X 버튼 클릭 시
+      clearBtn.addEventListener("click", function () {
+        fileInput.value = "";
+        fileNameInput.value = "";
+        clearBtn.style.display = "none";
+
+        fileBtn.classList.remove("disabled");
+      });
+    });
+
+  </script>
+</body>
+
+</html>
