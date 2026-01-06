@@ -10060,9 +10060,9 @@ body.mobile .term_nav .bar>div.col2 a {
 
 #wrap.admin #admin_header .sta .title h1 b {
   width: 95px;
-  height: 46px;
-  background-image: url(../../../resource/assets/images/logo.png);
-  background-size: auto;
+  height: 60px;
+  background-image: url(../../../resource/assets/images/MKIS_logo.svg);
+  background-size: contain;
 }
 
 #wrap.admin #admin_header .sta .link {
@@ -10154,7 +10154,7 @@ body.mobile .term_nav .bar>div.col2 a {
 
 #wrap.admin #container .admin_snb h2 b {
   color: #010101;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
   font-weight: 600;
 }
@@ -10261,7 +10261,7 @@ body.mobile .term_nav .bar>div.col2 a {
   -webkit-background-size: 9px 9px;
   background-size: 9px;
   cursor: pointer;
-  cursor: hand;
+  /*cursor: hand;*/
 }
 
 .admin_snb .lnb a {
@@ -10298,7 +10298,7 @@ body.mobile .term_nav .bar>div.col2 a {
 }
 
 .admin_snb .lnb .depth1>li:last-child>a {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 
 .admin_snb .lnb .depth1>li.on>i {
@@ -10456,7 +10456,7 @@ border-bottom: 1px solid #ccc;
   -webkit-background-size: 9px 9px;
   background-size: 9px;
   cursor: pointer;
-  cursor: hand;
+  /*cursor: hand;*/
 }
 
 .admin_popup_snb .lnb a {
