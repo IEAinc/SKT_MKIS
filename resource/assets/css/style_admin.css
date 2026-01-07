@@ -3011,6 +3011,7 @@ input[type="text"]#pSrcKeyword,
 input[type="text"]#pSrcKeyword1,
 input[type="text"]#pSrcKeyword2,
 input[type="text"]#schKeyword,
+input[type="text"].searchValueCommon,/* 260106-추가 */
 input[type="text"]#searchValue,
 input[type="text"]#_srcKeyword,
 input[type="text"].block#trmNm,
